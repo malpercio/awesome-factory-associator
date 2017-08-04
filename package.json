@@ -1,0 +1,87 @@
+{
+  "name": "awesome-factory-associator",
+  "version": "0.0.1",
+  "description": "Sails hook aimed to aid unit testing by creating model instances and associations using Sequelize",
+  "main": "index.js",
+  "sails": {
+    "isHook": true
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/$MODULE.test.js --timeout $npm_package_config_timeout",
+    "test:all": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test --recursive --timeout $npm_package_config_timeout",
+    "test:only": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test --recursive --grep $MODULE --timeout $npm_package_config_timeout",
+    "test:except": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test --recursive --grep $MODULE -i --timeout $npm_package_config_timeout"
+  },
+  "config": {
+    "timeout": 9000
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malpercio/awesome-factory-associator.git"
+  },
+  "keywords": [
+    "sequelize",
+    "fireline",
+    "sails",
+    "sailshook",
+    "sails-hook",
+    "testing",
+    "model",
+    "orm",
+    "associations",
+    "factory",
+    "unittesting"
+  ],
+  "author": {
+    "name": "Daniel González Espinoza",
+    "email": "danielglezespinoza@gmail.com",
+    "url": "github.com/malpercio"
+  },
+  "maintainers": [
+    {
+      "name": "Alejandra Krystel Coloapa Díaz",
+      "email": "",
+      "url": "github.com/aleexkj"
+    },
+    {
+      "name": "Susana Hahn Martín Lunas",
+      "email": "",
+      "url": "github.com/malpercio"
+    },
+    {
+      "name": "Jorge Santiago Álvarez Cuadros",
+      "email": "",
+      "url": "github.com/sanjorgek"
+    },
+    {
+      "name": "Lisandro Vázquez Aguilar",
+      "email": "",
+      "url": "github.com/LisandroV"
+    },
+    {
+      "name": "Francisco Javier Márquez Cortés",
+      "email": "",
+      "url": "github.com/ratrabbit"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malpercio/awesome-factory-associator/issues"
+  },
+  "homepage": "https://github.com/malpercio/awesome-factory-associator#readme",
+  "devDependencies": {
+    "bithound": "^1.7.0",
+    "bluebird-retry": "^0.11.0",
+    "chai": "^4.1.0",
+    "debug": "^2.6.8",
+    "eslint": "^4.3.0",
+    "mocha": "^3.5.0",
+    "mysql2": "^1.3.6",
+    "sails": "^0.12.13",
+    "sails-hook-fireline": "^2.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "lodash": "^4.17.4"
+  }
+}
