@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "6"
+  - "7"
+services:
+  - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE awesome_tests;'
+  - 'npm i'
+script:
+  - 'npm run test:all'
